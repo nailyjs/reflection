@@ -1,0 +1,47 @@
+{
+  "name": "@nailyjs/reflection",
+  "description": "The untimate reflection typings for TypeScript 5.x's stage 3 decorators",
+  "version": "0.1.0",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.mjs",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "reflect",
+    "metadata",
+    "decorator",
+    "babel"
+  ],
+  "author": {
+    "email": "gczgroup@qq.com",
+    "name": "Zero",
+    "url": "http://github.com/groupguanfang"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org",
+    "tag": "latest"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nailyjs/metadata"
+  },
+  "bugs": {
+    "url": "http://github.com/nailyjs/metadata/issues"
+  },
+  "homepage": "http://github.com/nailyjs/metadata",
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.1",
+    "@babel/types": "^7.24.0",
+    "@babel/generator": "^7.24.1",
+    "@types/babel__generator": "^7.6.8",
+    "unplugin-ast": "^0.9.0"
+  }
+}

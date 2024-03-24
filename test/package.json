@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "type": "commonjs",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs",
+    "dev": "rollup -c rollup.config.mjs && node lib/cjs/main.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/cli": "^7.24.1",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2",
+    "@babel/plugin-proposal-decorators": "^7.24.1",
+    "@babel/preset-typescript": "^7.24.1",
+    "@nailyjs/reflection": "workspace:*",
+    "unplugin-ast": "^0.9.0",
+    "@babel/types": "^7.24.0"
+  }
+}
