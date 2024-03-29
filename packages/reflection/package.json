@@ -23,8 +23,7 @@
     }
   },
   "files": [
-    "lib",
-    "**/*.md"
+    "lib"
   ],
   "keywords": [
     "reflect",
@@ -53,7 +52,7 @@
   "homepage": "http://github.com/nailyjs/metadata",
   "scripts": {
     "build": "rollup -c rollup.config.mjs",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "cp ../../README.md ./ && npm run build"
   },
   "dependencies": {
     "reflect-metadata": "^0.2.1",
