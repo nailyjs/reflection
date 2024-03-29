@@ -1,7 +1,7 @@
 {
   "name": "@nailyjs/babel-plugin-reflection",
   "description": "The untimate reflection typings for TypeScript 5.x's stage 3 decorators",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.mjs",
   "types": "./lib/types/index.d.ts",
