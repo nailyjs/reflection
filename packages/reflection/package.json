@@ -1,0 +1,68 @@
+{
+  "name": "@nailyjs/babel-plugin-reflection",
+  "description": "The untimate reflection typings for TypeScript 5.x's stage 3 decorators",
+  "version": "0.2.0",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.mjs",
+  "types": "./lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/esm/index.mjs",
+      "require": "./lib/cjs/index.js",
+      "types": "./lib/types/index.d.ts"
+    },
+    "./legacy": {
+      "import": "./lib/esm/legacy.mjs",
+      "require": "./lib/cjs/legacy.js",
+      "types": "./lib/types/legacy.d.ts"
+    },
+    "./stage3": {
+      "import": "./lib/esm/stage3.mjs",
+      "require": "./lib/cjs/stage3.js",
+      "types": "./lib/types/stage3.d.ts"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "reflect",
+    "metadata",
+    "decorator",
+    "babel"
+  ],
+  "author": {
+    "email": "gczgroup@qq.com",
+    "name": "Zero",
+    "url": "http://github.com/groupguanfang"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org",
+    "tag": "latest"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nailyjs/metadata"
+  },
+  "bugs": {
+    "url": "http://github.com/nailyjs/metadata/issues"
+  },
+  "homepage": "http://github.com/nailyjs/metadata",
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.1",
+    "@babel/types": "^7.24.0",
+    "@babel/generator": "^7.24.1",
+    "@types/babel__generator": "^7.6.8",
+    "@babel/core": "^7.24.3",
+    "@types/babel__core": "^7.20.5",
+    "@babel/helper-plugin-utils": "^7.24.0",
+    "@types/babel__helper-plugin-utils": "^7.10.3",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2"
+  }
+}
