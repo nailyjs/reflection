@@ -1,7 +1,8 @@
 {
-  "name": "@nailyjs/babel-plugin-reflection",
-  "description": "The ultimate reflection typings for TypeScript 5.x's stage 3 decorators",
-  "version": "0.2.4",
+  "name": "@nailyjs/decorator-builder",
+  "description": "Decorator builder for all stage",
+  "private": true,
+  "version": "0.2.0",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.mjs",
   "types": "./lib/types/index.d.ts",
@@ -10,16 +11,6 @@
       "import": "./lib/esm/index.mjs",
       "require": "./lib/cjs/index.js",
       "types": "./lib/types/index.d.ts"
-    },
-    "./legacy": {
-      "import": "./lib/esm/legacy.mjs",
-      "require": "./lib/cjs/legacy.js",
-      "types": "./lib/types/legacy.d.ts"
-    },
-    "./stage3": {
-      "import": "./lib/esm/stage3.mjs",
-      "require": "./lib/cjs/stage3.js",
-      "types": "./lib/types/stage3.d.ts"
     }
   },
   "files": [

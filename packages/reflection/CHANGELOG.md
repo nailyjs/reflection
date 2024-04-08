@@ -1,5 +1,11 @@
 # @nailyjs/babel-plugin-reflection
 
+## 0.2.4
+
+### Patch Changes
+
+- fix: when class property decorator is not exist
+
 ## 0.2.3
 
 ### Patch Changes

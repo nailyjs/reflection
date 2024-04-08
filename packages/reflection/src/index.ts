@@ -22,6 +22,7 @@ function addValue(key: string, value: t.Expression, nodePath: NodePath<t.ClassMe
   if (key === "design:defaultValue" && opts.disableDesignDefaultValue) return;
   if (key === "design:readonly" && opts.disableDesignReadonly) return;
 
+  if (!nodePath.node.decorators) nodePath.node.decorators = [];
   // prettier-ignore
   nodePath.unshiftContainer("decorators", t.decorator(
     t.callExpression(
@@ -50,6 +51,8 @@ export default declare<IBabelPluginOptions>((api, options): PluginObj => {
 
             path.traverse({
               ClassMethod(classMethodPath) {
+                if (!classMethodPath) return;
+                if (!classMethodPath.node) return;
                 if (!classMethodPath.node.decorators) return;
                 if (!options.disableDesignExtraReturnType && classMethodPath.node.returnType && classMethodPath.node.returnType.type !== "Noop") {
                   // prettier-ignore
@@ -75,6 +78,9 @@ export default declare<IBabelPluginOptions>((api, options): PluginObj => {
                 addValue("design:kind", t.stringLiteral(classMethodPath.node.kind), classMethodPath, options);
               },
               ClassProperty(classPropertyPath) {
+                if (!classPropertyPath) return;
+                if (!classPropertyPath.node) return;
+
                 addValue("design:abstract", t.booleanLiteral(classPropertyPath.node.abstract || false), classPropertyPath, options);
                 addValue("design:accessibility", t.stringLiteral(classPropertyPath.node.accessibility || "public"), classPropertyPath, options);
                 addValue("design:static", t.booleanLiteral(classPropertyPath.node.static || false), classPropertyPath, options);
